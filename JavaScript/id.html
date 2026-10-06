@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript dom Manipulation</title>
+</head>
+<body>
+    <h1>DOM is a tree of nodes  that represents the html page </h1>
+<!-- <p id ="Para">This is the paragraph havinga an id </p>-->
+    <div class="name">
+        <h1>Heading of getElement By ClassName0</h1>
+    </div>
+       <div class="name">
+        <h1>Heading of getElement By ClassName1</h1>
+    </div>
+       <div class="name">
+        <h1>Heading of getElement By ClassName2</h1>
+    </div>
+    <input type="text" placeholder="Enter Your Name" name="Inputs">
+        <input id="input1" type="Number" placeholder="Enter Your Phone Number" name="Inputs">
+    <input type="email" placeholder="Enter Your Mail Id" name="Inputs">
+    <button id="newbtn">Callbackbutton</button>
+
+    <p>TagName1</p>
+    <p>TagName2</p>
+    <p>TagName3</p>
+
+</body>
+<script>
+    let para =document.getElementById("Para");
+    console.log(para);
+    let className =document.getElementsByClassName("name");
+    console.log(className);
+    console.log(className[0]);
+    let Name =document.getElementsByName("Inputs");
+    console.log(Name);
+    console.log(Name[0]);
+    let tag =document.getElementsByTagName("p");
+    console.log(tag);
+    console.log(tag[2]);
+    //QuerySelector 
+    //tagName 
+   // let tagnameselector =document.querySelector("p");
+    //tagnameselector.style.backgroundColor="Yellow";
+//id 
+let selectorid =document.querySelector("#input1")
+     selectorid.style.backgroundColor="Yellow";
+//querySelectorByall
+let selectorAll= document.querySelectorAll("p");
+console.log(selectorAll)
+
+for(let i =0;i<selectorAll.length;i++){
+    selectorAll[i].style.backgroundColor="Pink";
+}
+    let btn =document.getElementById("newbtn").addEventListener("click",()=>{
+        console.log("button clicked");
+        alert("button clicked successfully")
+    })
+
+</script>
+</html>
